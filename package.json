@@ -1,0 +1,45 @@
+{
+  "name": "azure-notification-module-provider",
+  "version": "0.0.3",
+  "description": "Azure Communication Services notification provider for Medusa v2",
+  "author": "ahgentil",
+  "license": "MIT",
+  "files": [
+    ".medusa/server"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./providers/*": "./.medusa/server/src/providers/*/index.js"
+  },
+  "keywords": [
+    "medusa",
+    "plugin",
+    "medusa-plugin",
+    "medusa-v2",
+    "medusa-plugin-notification"
+  ],
+  "scripts": {
+    "build": "medusa plugin:build",
+    "dev": "medusa plugin:develop",
+    "prepublishOnly": "medusa plugin:build"
+  },
+  "devDependencies": {
+    "@medusajs/cli": "~2.13.6",
+    "@medusajs/framework": "~2.13.6",
+    "@medusajs/medusa": "~2.13.6",
+    "@swc/core": "1.7.28",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "@medusajs/framework": "~2.13.6",
+    "@medusajs/medusa": "~2.13.6"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@azure/communication-email": "^1.0.0"
+  }
+}
